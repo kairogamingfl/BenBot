@@ -125,6 +125,7 @@ async def on_app_command_error(interaction: discord.Interaction, error: app_comm
 
 def main():
     token = config.BOT_TOKEN
+    print("token length:", len(token), "| dots:", token.count("."), "| clean:", token == token.strip().strip('"\''))
     if not token or token == "YOUR_DISCORD_BOT_TOKEN_HERE":
         print(f"\n{Fore.RED}[CRITICAL ERROR] Bot Token is missing!{Style.RESET_ALL}")
         print(f"{Fore.YELLOW}Please open the `.env` file and insert your Discord Bot Token:{Style.RESET_ALL}")
